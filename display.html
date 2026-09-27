@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MANQUE DE SOMMEIL — DISPLAY</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #f5f2eb;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    padding: 20px;
+
+    background: rgba(8,8,8,0.95);
+    border-bottom: 1px solid #292929;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+}
+
+nav a {
+    color: #999;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: #c9ad72;
+}
+
+
+/* DISPLAY */
+
+.display {
+    padding: 130px 20px 80px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.intro small {
+    color: #888;
+    letter-spacing: 4px;
+}
+
+.intro h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 7vw, 80px);
+    font-weight: normal;
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+.line {
+    width: 70px;
+    height: 1px;
+    background: #c9ad72;
+    margin: 30px auto;
+}
+
+.intro p {
+    color: #c9ad72;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+
+/* PRODUK */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #292929;
+}
+
+.product img {
+    width: 100%;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+    border-top: 1px solid #292929;
+}
+
+.product-info span {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+
+/* DETAIL */
+
+.details {
+    max-width: 700px;
+    margin: 100px auto 0;
+    text-align: center;
+    border-top: 1px solid #292929;
+    padding-top: 70px;
+}
+
+.details small {
+    color: #888;
+    letter-spacing: 4px;
+}
+
+.details h2 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: normal;
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+
+.description {
+    color: #888;
+    line-height: 1.8;
+    margin: 30px auto;
+    max-width: 550px;
+}
+
+.specs {
+    border-top: 1px solid #292929;
+    margin-top: 40px;
+}
+
+.spec {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid #292929;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.spec span:first-child {
+    color: #777;
+}
+
+.price {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+
+    border: 1px solid #c9ad72;
+    color: #c9ad72;
+
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.button:hover {
+    background: #c9ad72;
+    color: #080808;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 50px;
+    text-align: center;
+    border-top: 1px solid #292929;
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+
+/* HP */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    .logo {
+        font-size: 9px;
+    }
+
+    nav {
+        gap: 9px;
+    }
+
+    nav a {
+        font-size: 7px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h1 {
+        font-size: 38px;
+    }
+
+    .details h2 {
+        font-size: 36px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        MANQUE DE SOMMEIL
+    </div>
+
+    <nav>
+
+        <a href="./index.html">
+            HOME
+        </a>
+
+        <a href="./display.html">
+            DISPLAY
+        </a>
+
+        <a href="./index.html#about">
+            ABOUT
+        </a>
+
+        <a href="./index.html#contact">
+            CONTACT
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="display">
+
+
+<section class="intro">
+
+    <small>
+        DROP 01 — INSOMNIA
+    </small>
+
+    <h1>
+        MDS INSOMNIA TEE
+    </h1>
+
+    <div class="line"></div>
+
+    <p>
+        SAME SKY, DIFFERENT DREAMS.
+    </p>
+
+</section>
+
+
+<section class="products">
+
+
+    <div class="product">
+
+        <img src="mds-front.png"
+             alt="MDS Insomnia Tee Front">
+
+        <div class="product-info">
+            <span>
+                01 / FRONT
+            </span>
+        </div>
+
+    </div>
+
+
+    <div class="product">
+
+        <img src="mds-back.png"
+             alt="MDS Insomnia Tee Back">
+
+        <div class="product-info">
+            <span>
+                02 / BACK
+            </span>
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<section class="details">
+
+    <small>
+        MANQUE DE SOMMEIL
+    </small>
+
+    <h2>
+        INSOMNIA TEE
+    </h2>
+
+    <p class="description">
+
+        A washed black oversized T-shirt
+        inspired by sleepless nights,
+        quiet cities and different dreams.
+
+    </p>
+
+
+    <div class="specs">
+
+        <div class="spec">
+            <span>COLOR</span>
+            <span>WASHED BLACK</span>
+        </div>
+
+        <div class="spec">
+            <span>MATERIAL</span>
+            <span>100% COTTON 24S</span>
+        </div>
+
+        <div class="spec">
+            <span>FIT</span>
+            <span>OVERSIZED</span>
+        </div>
+
+        <div class="spec">
+            <span>SIZE</span>
+            <span>S / M / L / XL / XXL</span>
+        </div>
+
+    </div>
+
+
+    <div class="price">
+        Rp 150.000
+    </div>
+
+
+    <a href="./index.html#contact" class="button">
+        ORDER NOW
+    </a>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    MANQUE DE SOMMEIL
+    <br><br>
+    © 2026 ALL RIGHTS RESERVED
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MANQUE DE SOMMEIL</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #080808;
+            color: #f5f2eb;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8, 8, 8, 0.9);
+            border-bottom: 1px solid #292929;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            letter-spacing: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #f5f2eb;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover {
+            color: #c9ad72;
+        }
+
+
+        /* HOME */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 8% 80px;
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.8)),
+                url("campaign.jpg") center/cover;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .eyebrow {
+            color: #999;
+            font-size: 11px;
+            letter-spacing: 5px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(50px, 9vw, 120px);
+            font-weight: 400;
+            line-height: .95;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            margin-top: 35px;
+            color: #aaa;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            padding: 150px 8%;
+            border-top: 1px solid #292929;
+            border-bottom: 1px solid #292929;
+        }
+
+        .about h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(42px, 7vw, 90px);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: 2px;
+            margin-bottom: 120px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 50px;
+            max-width: 900px;
+            margin: 0 auto 100px;
+            padding-top: 40px;
+            border-top: 1px solid #292929;
+        }
+
+        .about-number {
+            color: #777;
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        .about-content h3 {
+            font-size: 13px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .about-content p {
+            max-width: 650px;
+            color: #999;
+            font-size: 15px;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .about-quote {
+            padding-top: 80px;
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: clamp(28px, 5vw, 60px);
+            line-height: 1.3;
+            font-style: italic;
+            letter-spacing: 3px;
+        }
+
+        .about-quote span {
+            color: #777;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            padding: 120px 8%;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: Georgia, serif;
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .contact p {
+            color: #999;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 1px solid #555;
+            color: #f5f2eb;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin: 5px;
+        }
+
+        .button:hover {
+            border-color: #c9ad72;
+            color: #c9ad72;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 40px 8%;
+            border-top: 1px solid #292929;
+            text-align: center;
+            color: #666;
+            font-size: 10px;
+            letter-spacing: 3px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 20px 5%;
+            }
+
+            .logo {
+                font-size: 14px;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 9px;
+            }
+
+            .about {
+                padding: 100px 6%;
+            }
+
+            .about h2 {
+                margin-bottom: 80px;
+            }
+
+            .about-content {
+                grid-template-columns: 40px 1fr;
+                gap: 20px;
+                margin-bottom: 70px;
+            }
+
+            .about-content p {
+                font-size: 13px;
+            }
+
+            .contact h2 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            MANQUE DE SOMMEIL
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="display.html">DISPLAY</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HOME -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                DROP 01 — INSOMNIA
+            </p>
+
+            <h1>
+                THE NIGHTS<br>
+                WE NEVER<br>
+                SLEEP.
+            </h1>
+
+            <p>
+                SAME SKY, DIFFERENT DREAMS.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+        <p class="eyebrow">
+            ABOUT MANQUE DE SOMMEIL
+        </p>
+
+        <h2>
+            WEAR THE NIGHT.<br>
+            LIVE THE DREAM.
+        </h2>
+
+
+        <!-- 01 -->
+
+        <div class="about-content">
+
+            <div class="about-number">
+                01
+            </div>
+
+            <div>
+
+                <h3>
+                    THE BEGINNING
+                </h3>
+
+                <p>
+                    MANQUE DE SOMMEIL lahir dari sebuah gagasan sederhana:
+                    bagaimana jika malam bukan hanya waktu untuk tidur,
+                    tetapi menjadi ruang untuk berpikir, bermimpi,
+                    dan menemukan diri sendiri?
+                </p>
+
+                <p>
+                    Berawal dari keresahan, keheningan, dan malam-malam
+                    yang terasa panjang, MANQUE DE SOMMEIL hadir sebagai
+                    independent fashion brand yang membawa cerita tentang
+                    kehidupan malam, mimpi, dan identitas.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 02 -->
+
+        <div class="about-content">
+
+            <div class="about-number">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    OUR PHILOSOPHY
+                </h3>
+
+                <p>
+                    Kami percaya bahwa setiap orang memiliki cerita
+                    yang berbeda. Ada yang mengejar mimpi ketika dunia
+                    tertidur, ada yang menemukan inspirasi dalam
+                    kesunyian, dan ada yang hanya ingin menjadi
+                    dirinya sendiri.
+                </p>
+
+                <p>
+                    Karena itu, setiap karya MANQUE DE SOMMEIL tidak
+                    hanya dibuat untuk dikenakan, tetapi juga untuk
+                    membawa sebuah perasaan, suasana, dan cerita.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 03 -->
+
+        <div class="about-content">
+
+            <div class="about-number">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    THE NIGHT
+                </h3>
+
+                <p>
+                    Malam menjadi bagian penting dari identitas kami.
+                    Gelap, tenang, misterius, tetapi penuh kemungkinan.
+                    Di saat kota mulai diam, pikiran justru sering kali
+                    menjadi lebih hidup.
+                </p>
+
+                <p>
+                    INSOMNIA menjadi representasi pertama dari dunia
+                    tersebut — sebuah cerita tentang malam yang tidak
+                    pernah benar-benar selesai.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 04 -->
+
+        <div class="about-content">
+
+            <div class="about-number">
+                04
+            </div>
+
+            <div>
+
+                <h3>
+                    OUR APPROACH
+                </h3>
+
+                <p>
+                    MANQUE DE SOMMEIL menggabungkan elemen streetwear
+                    dengan pendekatan visual yang minimal, gelap,
+                    dan emosional.
+                </p>
+
+                <p>
+                    Kami memperhatikan siluet, material, detail grafis,
+                    dan bagaimana sebuah pakaian dapat menjadi bagian
+                    dari karakter seseorang.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUOTE -->
+
+        <div class="about-quote">
+
+            <span>“</span>
+
+            MÊME CIEL,<br>
+            DIFFÉRENTS RÊVES.
+
+            <span>”</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <p class="eyebrow">
+            GET IN TOUCH
+        </p>
+
+        <h2>
+            LET'S TALK.
+        </h2>
+
+        <p>
+            For orders, collaborations, and inquiries.
+        </p>
+
+    <a href="https://wa.me/6283162122244?text=Halo%20MANQUE%20DE%20SOMMEIL%2C%20saya%20ingin%20order%20INSOMNIA%20TEE.%0A%0AProduk%3A%20INSOMNIA%20TEE%0AHarga%3A%20Rp%20150.000%0A%0ASize%20yang%20saya%20pilih%3A%20S%20%2F%20M%20%2F%20L%20%2F%20XL%20%2F%20XXL%0A%0ANama%3A%0AJumlah%3A%0A%0ATerima%20kasih.%0A" 
+    class="button">
+    ORDER VIA WHATSAPP
+</a>
+        <a
+            href=""
+            class="button"
+        >
+            INSTAGRAM
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        MANQUE DE SOMMEIL — EST. 2026
+
+    </footer>
+
+
+</body>
+</html>
